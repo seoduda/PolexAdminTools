@@ -2,6 +2,7 @@
 
 include_once "SubscriptionReportData.php";
 include_once "ReportChart.php";
+require_once "db_config.php";
 
 /**
  * Created by PhpStorm.
@@ -151,13 +152,11 @@ class Report
         $password = "";
         $dbname = "cdcol";
         */
-        $servername = "mysql01.site1376498500.hospedagemdesites.ws";
-        $username = "site1376498500";
-        $password = "c7HmgP0LXt";
-        $dbname = "site1376498500";
+
+        $db_cfg = new db_config();
 
 
-        $conn = new PDO('mysql:host='.$servername.';dbname='.$dbname.';charset=utf8',$username, $password);
+        $conn = new PDO('mysql:host='.$db_cfg->db_hostname.';dbname='.$db_cfg->db_database.';charset=utf8',$db_cfg->db_username, $db_cfg->db_password);
         if(!$conn){
             die('Erro ao criar a conexão');
         }

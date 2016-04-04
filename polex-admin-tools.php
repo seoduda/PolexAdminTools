@@ -2,11 +2,11 @@
 
 /*
 Plugin Name: Polex Admin Tools
-Plugin URI: http://URI_Of_Page_Describing_Plugin_and_Updates
-Description: Ferramentas para ajudar a administração de assinaturas e geração de relatório
-Version: 1.0
+Plugin URI: https://github.com/seoduda/PolexAdminTools
+Description: Ferramentas de gestão de assinaturas e geração de relatórios
+Version: 1.0.5
 Author: Duda
-Author URI: http://URI_Of_The_Plugin_Author
+Author URI: https://github.com/seoduda
 License:GPL2
 */
 
@@ -69,13 +69,6 @@ function polex_admin_init()
     $tab = (!empty($_GET['tab'])) ? esc_attr($_GET['tab']) : 'first';
     polex_admin_page_tabs($tab);
     $polex_adm_vars['tab'] = $tab;
-
-
-    echo '<BR>';
-    echo 'polex_adm_vars:';
-    print_r($polex_adm_vars);
-    echo '<BR>';
-
 
     switch ($polex_adm_vars['tab']) {
         case "second":
