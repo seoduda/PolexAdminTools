@@ -1,0 +1,33 @@
+#wrapper {
+    width:1050px;
+    height:310px;
+    clear:both;
+}
+#first {
+    background-color:red;
+    width:350px;
+    height:300pxpx;
+    float:left;
+}
+#second {
+    background-color:blue;
+    width:350px;
+    height:300pxpx;
+    float:left;
+}
+#third {
+    background-color:#bada55;
+    width:350px;
+    height:300pxpx;
+    float:left;
+}
+
+#report_div{
+    width:1000px;
+    height:400pxpx;
+}
+
+#table_div{
+    width:800px;
+}
+
